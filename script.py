@@ -1,15 +1,6 @@
-import sys
-
-print(sys.version)
-print(sys.executable)
+import requests
 
 
-def greet(who_to_target):
-    greeting = 'Hello, {}'.format(who_to_target)
-    return greeting
-
-
-print(greet("World"))
-print(greet('Corey'))
-
-print
+r = requests.get("https://google.com")
+print(r.status_code)
+print(r.ok)
